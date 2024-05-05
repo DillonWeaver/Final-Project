@@ -1,6 +1,6 @@
-import random
-from time import sleep
-from PIL import Image
+import random #For the randomizer in input 6
+from time import sleep #Controls the speed of each printed string
+from PIL import Image #Allows PNG images to be openned
 
 class Artworks(): #Contains functions to open and print information for each painting
    def monalisa():
