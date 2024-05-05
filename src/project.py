@@ -2,10 +2,10 @@ import random
 from time import sleep
 from PIL import Image
 
-class Artworks():
+class Artworks(): #Contains functions to open and print information for each painting
    def monalisa():
       filename = "emojilisa.png"
-      img = Image.open(filename)
+      img = Image.open(filename) #Displays each image for every function
       img.show()
       printspeed("The Mona Lisa, the world's most famous painting!")
       printspeed("10 Million people a year travel to see this iconic artwork.")
@@ -58,22 +58,22 @@ class Artworks():
       printspeed("🧓👴")
       img.close()
 
-def randomart(painting):
+def randomart(painting): #Randomizer for option 6
    painting = [Artworks.monalisa, Artworks.starrynight, Artworks.pearlearring, Artworks.scream, Artworks.gothic]
    random_art = random.choice(painting)
    random_art()
 
-def printspeed(text):
+def printspeed(text): #Allows whats printed in the terminal to be segmented
    for e in text:
       print(e, end="", flush=True)
-      sleep(0.05)
+      sleep(0.05) #Speed of printed letters
    print()
    
-def main():
+def main(): #Opening, closing, random and invalid statements along with collecting user input
     printspeed("Welcome to the 🖌🖼🖋 DIGITAL EMOJI ART MUSEUM! 🖌🖼🖋")
     printspeed("Here you will see some of the world's most iconic paintings recreated entirely through emojis! 😀")
     while True:
-       art = int(input("Pick which painting you wish to see (1, 2 ,3 ,4, 5, 6 for a random painting or 7 to quit!): "))
+       art = int(input("Pick which painting you wish to see (1, 2 ,3 ,4, 5, 6 for a random painting or 7 to quit!): ")) #Loop to allow users to input choice artwork
 
        if art == 1:
           Artworks.monalisa()
@@ -93,7 +93,7 @@ def main():
           printspeed("Hope to see you again soon! 😄✋")
           break
        else:
-          printspeed("Whoops! Invalid input 😯 choose again!")
+          printspeed("Whoops! Invalid input 😯 choose again!") #Message for all invalid inputs
 
 
 if __name__ == "__main__":
