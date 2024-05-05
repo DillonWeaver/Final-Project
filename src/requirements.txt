@@ -1,0 +1,8 @@
+random
+time
+pillow
+emojiearring.png
+emojigothic.png
+emojilisa.png
+emojinight.png
+emojiscream.png
